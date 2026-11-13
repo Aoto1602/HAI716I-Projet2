@@ -9,7 +9,7 @@ class Strategy:
         self.rng = random.Random(seed)
 
     def reset(self):
-        self.rng = random.Random(self.seed)
+        pass
 
     # h1 : historique de mes coups
     # h2 : historique des coups de l'adversaire
