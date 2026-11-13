@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 import random
 
 PD = {(C,C):(3,3), (C,D):(0,5), (D,C):(5,0), (D,D):(2,2)}
+classes=[ALL_D,RANDOM,TIT_FOR_TAT,TESTER,JOSS]
 
 @dataclass
 class Config:
