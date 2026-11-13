@@ -20,8 +20,8 @@ def play_game(s1, s2, n_rounds, cfg, rng):
     s1.reset(); s2.reset()
     h1, h2, sc1, sc2 = [], [], 0, 0
     for _ in range(n_rounds):
-        a1 = s1.move(tuple(h1), tuple(h2), rng)   # tuple 防止策略篡改历史; h1,h2 sont des histoires des choix de chacun
-        a2 = s2.move(tuple(h2), tuple(h1), rng)
+        a1 = s1.play(tuple(h1), tuple(h2), rng)   # tuple 防止策略篡改历史; h1,h2 sont des histoires des choix de chacun
+        a2 = s2.play(tuple(h2), tuple(h1), rng)
         if rng.random() < cfg.noise: a1 = flip(a1)  # noise pour deranger les stratégie,si le noise a reussi a déranger, alors le choix de stratégie va etre l'inverse
         if rng.random() < cfg.noise: a2 = flip(a2)
         p1, p2 = cfg.payoff[(a1, a2)]
