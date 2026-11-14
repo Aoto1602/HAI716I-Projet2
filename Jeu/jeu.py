@@ -2,6 +2,13 @@
 from dataclasses import dataclass, field
 import random
 
+from strategie.strat_all_d import ALL_D
+from strategie.strat_joss import JOSS
+from strategie.strat_random import RANDOM
+from strategie.strat_tester import TESTER
+from strategie.strat_tit_for_tat import TIT_FOR_TAT
+
+C, D = "C", "D"
 PD = {(C,C):(3,3), (C,D):(0,5), (D,C):(5,0), (D,D):(2,2)}
 classes=[ALL_D,RANDOM,TIT_FOR_TAT,TESTER,JOSS]
 
