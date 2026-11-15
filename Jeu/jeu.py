@@ -67,18 +67,19 @@ def tournament(classes, cfg):
     return M, sorted(totals.items(), key=lambda kv: -kv[1])
 
 # affiche le classement
-def print_ranking(title, ranking, ref_ranking=None):
-    n_opp = len(ranking) - 1 # nombre d'adversaires par stratégie
+def print_ranking(title, ranking, ref_ranking=None, score_diff=True):
+    nb_opp = len(ranking) - 1                      # nombre d'adversaires par stratégie
     print(f"=== {title} ===")
     if ref_ranking:
         ref_rank = {n: i for i, (n, _) in enumerate(ref_ranking, 1)}
         ref_score = dict(ref_ranking)
     for i, (name, total) in enumerate(ranking, 1):
-        line = f"{i}. {name:<12} {total:>7.0f}   moyenne/duel {total / n_opp:>6.0f}"
+        line = f"{i}. {name:<12} {total:>7.0f}   moyenne/duel {total / nb_opp:>6.0f}"
         if ref_ranking:
             if name in ref_rank:
-                line += (f"   rang {ref_rank[name]} -> {i} ({ref_rank[name] - i:+d})"
-                         f"   score {total - ref_score[name]:+.0f}")
+                line += f"   rang {ref_rank[name]} -> {i} ({ref_rank[name] - i:+d})"
+                if score_diff:
+                    line += f"   score {total - ref_score[name]:+.0f}"
             else:
                 line += "   nouvelle"
         print(line)
