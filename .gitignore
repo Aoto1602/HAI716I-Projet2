@@ -1,0 +1,36 @@
+
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Systèmes
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires de résultats (brouillons uniquement)
+# NB : results/ n'est PAS ignoré, les graphiques et classements
+# servent de captures pour le journal de bord.
+results/tmp/
+*.log
