@@ -27,10 +27,21 @@ python3 main.py bruit
 
 
 ## Étape 3, modification 2 : autres gains
-à compléter
+on a 2 matrices différents que celle de prisonnier(celle du cours)
+
+Chasse au cerf, valeurs de la diapositive 76 : C,C > D,C > D,D > C,D
+    "Chasse au cerf", {(C, C): (4, 4), (C, D): (0, 3), (D, C): (3, 0), (D, D): (1, 1)}
+
+Poule mouillée, ordre de la diapositive 74 : D,C > C,C > C,D > D,D
+    "chicken": "Poule mouillée", {(C, C): (3, 3), (C, D): (1, 4), (D, C): (4, 1), (D, D): (0, 0)}
+
 
 ```bash
-python3 main.py gains
+python3 main.py gains #(par défault on utilise la chasse au cerf)
+
+python3 main.py gains --jeu cerf
+
+python3 main.py gains --jeu chicken
 ```
 
 ## Aide
