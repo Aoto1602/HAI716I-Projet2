@@ -1,7 +1,7 @@
 from Jeu.strategie.strategy import Strategy
 
 
-class Grim(Strategy):
+class GRIM(Strategy):
     """GRIM TRIGGER (rancunière)
 
     Règle : coopère tant que l'adversaire n'a jamais trahi ; dès sa première

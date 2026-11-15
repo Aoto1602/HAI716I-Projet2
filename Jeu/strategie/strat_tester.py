@@ -1,4 +1,4 @@
-from strategy import Strategy
+from Jeu.strategie.strategy import Strategy
 
 # D au premier tour. Si l'adversaire riposte, joue TIT-FOR-TAT ; sinon répète C, C, D
 class TESTER(Strategy):

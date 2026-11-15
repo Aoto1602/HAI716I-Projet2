@@ -1,4 +1,4 @@
-from strategy import Strategy
+from Jeu.strategie.strategy import Strategy
 
 # TIT-FOR-TAT, mais remplace C par D une fois sur dix
 class JOSS(Strategy):
