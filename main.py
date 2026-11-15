@@ -31,7 +31,7 @@ def tournoi_etape2():
 
 # étape 3 - modification 1 : bruit
 def tournoi_bruit():
-    compare(etape2, Config(noise=0.0), Config(noise=0.05), "Sans bruit (étape 2)", "Bruit 5 %")
+    compare(etape2, Config(noise=0.0), Config(noise=0.1), "Sans bruit (étape 2)", "Bruit 10 %")
 
 
 # Matrices des jeux 2x2 (section 07 du cours)
