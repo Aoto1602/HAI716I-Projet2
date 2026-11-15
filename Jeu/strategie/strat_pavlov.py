@@ -1,7 +1,7 @@
 from Jeu.strategie.strategy import Strategy
 
 
-class Pavlov(Strategy):
+class PAVLOV(Strategy):
     """PAVLOV / WIN-STAY LOSE-SHIFT (WSLS)
 
     Règle : coopère au premier tour. Ensuite, si le tour précédent a bien
