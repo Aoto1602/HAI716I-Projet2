@@ -1,4 +1,4 @@
-from strategy import Strategy
+from Jeu.strategie.strategy import Strategy
 
 # C ou D au hasard, une chance sur deux : sert de témoin
 class RANDOM(Strategy):

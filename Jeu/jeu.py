@@ -2,11 +2,11 @@
 from dataclasses import dataclass, field
 import random
 
-from strategie.strat_all_d import ALL_D
-from strategie.strat_joss import JOSS
-from strategie.strat_random import RANDOM
-from strategie.strat_tester import TESTER
-from strategie.strat_tit_for_tat import TIT_FOR_TAT
+from Jeu.strategie.strat_all_d import ALL_D
+from Jeu.strategie.strat_joss import JOSS
+from Jeu.strategie.strat_random import RANDOM
+from Jeu.strategie.strat_tester import TESTER
+from Jeu.strategie.strat_tit_for_tat import TIT_FOR_TAT
 
 C, D = "C", "D"
 PD = {(C,C):(3,3), (C,D):(0,5), (D,C):(5,0), (D,D):(2,2)}
@@ -18,7 +18,7 @@ class Config:
     games: int = 5
     payoff: dict = field(default_factory=lambda: dict(PD))
     noise: float = 0.0          # bruit
-    self_play: bool = True      # contre lui meme
+    self_play: bool = False     # contre lui meme
     seed: int = 42
 
 def flip(a): return D if a == C else C

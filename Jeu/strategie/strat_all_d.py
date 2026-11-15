@@ -1,4 +1,4 @@
-from strategy import Strategy
+from Jeu.strategie.strategy import Strategy
 
 # toujours D : la stratégie « rationnelle » de la récurrence à rebours
 class ALL_D(Strategy):
